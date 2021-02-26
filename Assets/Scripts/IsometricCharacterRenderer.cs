@@ -10,7 +10,8 @@ public class IsometricCharacterRenderer : MonoBehaviour
     public static readonly string[] runDirections = {"Run N", "Run NW", "Run W", "Run SW", "Run S", "Run SE", "Run E", "Run NE"};
 
     Animator animator;
-    int lastDirection;
+    public int lastDirection;
+    
 
     private void Awake()
     {
@@ -61,6 +62,7 @@ public class IsometricCharacterRenderer : MonoBehaviour
         float angle = Vector2.SignedAngle(Vector2.up, normDir);
         //add the halfslice offset
         angle += halfstep;
+
         //if angle is negative, then let's make it positive by adding 360 to wrap it around.
         if (angle < 0){
             angle += 360;

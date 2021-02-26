@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &196494260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196494261}
+  m_Layer: 0
+  m_Name: HealthPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196494261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196494260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.852, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3339481645408498932}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1286448060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286448061}
+  m_Layer: 0
+  m_Name: Magic Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286448061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286448060}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.456, y: 0.356, z: 0.20616002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3339481645408498932}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3339481643503506216
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +121,7 @@ GameObject:
   - component: {fileID: 3339481644051735612}
   m_Layer: 0
   m_Name: WitchRender
-  m_TagString: Untagged
+  m_TagString: WitchRender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0631f36ac84554335b5b1f70f25312fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastDirection: 0
 --- !u!1 &3339481645326394338
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,9 +263,10 @@ GameObject:
   - component: {fileID: 3339481645408498930}
   - component: {fileID: 2079923368}
   - component: {fileID: 2079923369}
+  - component: {fileID: 2127327390}
   m_Layer: 0
   m_Name: Player_Isometric_Witch
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,6 +284,8 @@ Transform:
   m_Children:
   - {fileID: 3339481643503506217}
   - {fileID: 3339481645326394339}
+  - {fileID: 1286448061}
+  - {fileID: 196494261}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -270,3 +334,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
+  snowball: {fileID: 5370918499627074229, guid: db13a6f065d52b04a9880be08697dc63,
+    type: 3}
+  joyStick: {fileID: 0}
+--- !u!114 &2127327390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339481645408498929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccb40a1fd9c5ac4c9a08b56b2641c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowball: {fileID: 5370918499627074229, guid: db13a6f065d52b04a9880be08697dc63,
+    type: 3}
+  lastdir: 0
+  CdButton: {fileID: 0}
+  health: 5
+  sliderPrefab: {fileID: 7178674595722906849, guid: a9c7e821e336c314d8fe0c24f408045f,
+    type: 3}
+  sliderPos: {fileID: 196494261}
+  panel: {fileID: 0}
